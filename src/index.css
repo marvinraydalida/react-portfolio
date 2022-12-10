@@ -1,13 +1,215 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+
+:root {
+  --font: "Outfit", sans-serif;
+  --font-regular: 400;
+  --font-light: 300;
+  --font-bold: 700;
+  --bg-color: #292352;
+  --primary-color: #fff;
+  --primary-gray: #c0b7ff;
+  --secondary-color: #d342ab;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-family: var(--font);
+}
+
+h1,
+p {
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar {
+  height: 106px;
+  max-width: 1920px;
+  width: 85vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: var(--primary-color);
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+.navbar li {
+  margin-left: 50px;
+  font-weight: var(--font-light);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.home {
+  position: relative;
+}
+
+.introduction {
+  height: 80vh;
+  max-width: 1920px;
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+.introduction h1 {
+  font-size: 10rem;
+  font-weight: var(--font-regular);
+  line-height: 9rem;
+  color: var(--bg-color);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  margin-left: -10px;
+  animation: fadein 500ms ease-in-out, slide 500ms linear;
+  transition: all 250ms ease-in-out;
+}
+
+.introduction h1 > span {
+  color: var(--secondary-color);
+  text-shadow: none;
+}
+
+.introduction p {
+  max-width: 450px;
+  font-size: 2rem;
+  font-weight: var(--font-light);
+  margin-top: 2rem;
+  color: var(--primary-gray);
+  animation: fadein 500ms ease-in-out, slide 500ms linear;
+  transition: all 250ms ease-in-out;
+}
+
+.social {
+  margin-top: 30px;
+  animation: fadein 500ms ease-in-out, slide 500ms linear;
+}
+
+.social svg {
+  width: 40px;
+  height: 40px;
+  color: var(--secondary-color);
+  margin-right: 29px;
+  transition: all 250ms ease-in-out;
+}
+
+.social svg:hover {
+  transform: scale(1.1);
+}
+
+.gallery {
+  width: 19vw;
+  height: 130vh;
+  top: -100px;
+  transform: rotate(19deg);
+  position: absolute;
+  z-index: -1;
+  opacity: 0.25;
+  overflow: hidden;
+}
+
+#up {
+  right: 16.5%;
+}
+
+#down {
+  right: -5%;
+}
+
+.card {
+  height: 415px;
+  width: 100%;
+  border-radius: 20px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  animation: fadein 1s linear;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .introduction h1 {
+    font-size: 9rem;
+    line-height: 8rem;
+  }
+
+  .introduction p {
+    max-width: 400px;
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gallery {
+    width: 22vw;
+    height: 130vh;
+  }
+
+  #up {
+    right: 9.5%;
+  }
+
+  #down {
+    right: -15%;
+  }
+
+  .card {
+    height: 415px;
+    width: 100%;
+  }
 }
