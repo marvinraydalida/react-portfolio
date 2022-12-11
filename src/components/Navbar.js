@@ -10,7 +10,7 @@ function Navbar() {
         <li>
           <NavLink
             style={(data) =>
-              data.isActive ? { color: "#d342ab" } : { color: "#fff" }
+              data.isActive ? { color: "#d342ab" } : {}
             }
             to="/about"
           >

@@ -19,6 +19,14 @@ body {
   font-family: var(--font);
 }
 
+.home-body {
+  overflow: hidden !important;
+}
+
+.about-body {
+  overflow: auto !important;
+}
+
 h1,
 p {
   margin: 0px;
@@ -32,9 +40,10 @@ li {
   display: inline;
 }
 
-a{
+a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: all 250ms ease-in-out;
 }
 
 .navbar {
@@ -61,6 +70,12 @@ a{
   cursor: pointer;
 }
 
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+/* HOME */
+
 .home {
   position: relative;
 }
@@ -73,7 +88,6 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid black; */
 }
 
 .introduction h1 {
@@ -124,6 +138,7 @@ a{
   width: 19vw;
   height: 130vh;
   top: -100px;
+  border-radius: 20px;
   transform: rotate(19deg);
   position: absolute;
   z-index: -1;
@@ -148,6 +163,154 @@ a{
   background-position: center;
   animation: fadein 1s linear;
   transition: all 1s ease-in-out;
+}
+
+/* ABOUT */
+
+.about-section {
+  height: 75vh;
+  max-width: 1920px;
+  width: 85vw;
+  margin: 0px auto 200px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-section:first-of-type {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+.about-section:last-of-type {
+  height: 85vh !important;
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+.container h1 {
+  font-size: 5rem;
+  font-weight: var(--font-light);
+  color: var(--primary-color);
+  margin-top: -23px;
+  margin-bottom: 30px;
+}
+
+.container h1 span {
+  color: var(--secondary-color);
+}
+
+#image-me-container {
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  background-image: url("https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/83022700_2739147196172459_5038038780427108352_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEvnfnc06rVyWwmySDbMw9sd9FlASEEhJt30WUBIQSEm8R17T5I4U_oosN8z8Y5RWw7pwoCJzK9Kq4erYZG0x08&_nc_ohc=TIzf_NBmw7gAX8NtkWH&tn=qzo0U5Cc6c5PlvLA&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfDY27ftdWlGPhAL4a4xnN1KcbUMPRaEbqdDIEjvBKRb6g&oe=63BD28CD");
+}
+
+.container p {
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: var(--font-light);
+  line-height: 2.2rem;
+  color: var(--primary-gray);
+}
+
+#education .container:nth-child(2) {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#image-education-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  background-image: url("https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/79512714_2643900565701618_2940730903179034624_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_eui2=AeEr7p6bp6jwfqiUXXP_9lQmqCOOXUJMmoqoI45dQkyairT9ktqTj-P-CPcWAt3bWsF0ujsw3CTSP4VwVcjE1ioQ&_nc_ohc=NWKP9yu0KlcAX_eM4Lt&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfAg1GEU2UAtWKEyr5q6Mevg5VFDVVKz41mD3SsZm65gqw&oe=63BD4302");
+}
+
+.school-container {
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.course {
+  font-size: 1.2rem !important;
+  color: var(--secondary-color) !important;
+  line-height: 1.2rem !important;
+}
+
+.school-year {
+  font-size: 1.2rem !important;
+  color: var(--secondary-color) !important;
+}
+
+#hobby .container:nth-child(1) {
+  width: 50%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+
+#hobby .container:nth-child(2) {
+  width: 45%;
+}
+
+.hobby-image {
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  transition: all 100ms ease-in-out;
+}
+
+.hobby-image:nth-child(1) {
+  background-image: url("https://www.koreanindie.com/wp-content/uploads/2019/05/Jannabi_Legend.jpg");
+}
+.hobby-image:nth-child(2) {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a46d7d8-d8e1-497a-9b13-3e452d07e286/dd7oaqg-35bc7b76-562c-45e4-968b-900aa1a05b5c.png/v1/fill/w_1024,h_576,q_80,strp/toonami___gundam_the_origin_wallpaper_by_jpreckless2444_dd7oaqg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvMmE0NmQ3ZDgtZDhlMS00OTdhLTliMTMtM2U0NTJkMDdlMjg2XC9kZDdvYXFnLTM1YmM3Yjc2LTU2MmMtNDVlNC05NjhiLTkwMGFhMWEwNWI1Yy5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.lNINjF95tgbUJ4a86GMARTiVi9VSUd-PADifWxePohc");
+}
+.hobby-image:nth-child(3) {
+  background-image: url("https://steamcdn-a.akamaihd.net/apps/570/icons/econ/loading_screens/harmful_iron_fist_iron_fist_loading_screen_large.2b9334dca87db7109972cfb24315f802db721177.png");
+}
+.hobby-image:nth-child(4) {
+  background-image: url("https://www.udiscovermusic.com/wp-content/uploads/2020/06/Jimi-Hendrix-GettyImages-85001690-1000x600.jpg");
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.school-container, .hobby-image {
+  transition-delay: 200ms;
+}
+
+.school-container:nth-child(2), .hobby-image:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.school-container:nth-child(3), .hobby-image:nth-child(3) {
+  transition-delay: 600ms;
+}
+
+.school-container:nth-child(4), .hobby-image:nth-child(4) {
+  transition-delay: 800ms;
 }
 
 @keyframes fadein {

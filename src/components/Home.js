@@ -1,10 +1,15 @@
+import { useEffect } from "react";
+
 import Introduction from "./Introduction";
 import Gallery from "./Gallery";
 import Card from "./Card";
 
-import {} from "./Home.module.css";
-
 function Home() {
+
+  useEffect(() => {
+    document.body.className = 'home-body';
+  }, []);
+
   return (
     <>
       <Introduction />
