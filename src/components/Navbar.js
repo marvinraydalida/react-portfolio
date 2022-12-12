@@ -9,15 +9,20 @@ function Navbar() {
       <ul>
         <li>
           <NavLink
-            style={(data) =>
-              data.isActive ? { color: "#d342ab" } : {}
-            }
+            style={(data) => (data.isActive ? { color: "#d342ab" } : {})}
             to="/about"
           >
             about
           </NavLink>
         </li>
-        <li>skills</li>
+        <li>
+          <NavLink
+            style={(data) => (data.isActive ? { color: "#d342ab" } : {})}
+            to="/skill"
+          >
+            skills
+          </NavLink>
+        </li>
         <li>projects</li>
       </ul>
     </nav>

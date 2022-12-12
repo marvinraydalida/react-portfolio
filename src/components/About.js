@@ -6,7 +6,7 @@ function About() {
   const hobbyRef = useRef();
 
   useEffect(() => {
-    document.body.className = "about-body";
+    document.body.className = "scroll-body";
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -42,11 +42,13 @@ function About() {
             about.<span>me</span>
           </h1>
           <p>
-            Hello! I am Marvin, but I prefer to be called by my nickname Amben.
-            I still remember that moment when I displayed my first “Hello
-            World!” with HTML, it felt ecstatic. The thought of developing
-            something cool and fun has never left my mind, and that is the
-            reason why I’m pursuing a professional career as a developer.
+            Hello! My name is Marvin, but I prefer to be called Amben. I still
+            remember the exhilarating feeling of creating my first "Hello
+            World!" program in HTML. The idea of developing exciting and
+            engaging applications has always captivated my mind, and that is why
+            I am pursuing a professional career as a developer. Excited to learn
+            new skills and techniques for creating innovative solutions. Let's
+            explore the world of code together and see what we can achieve!
           </p>
         </div>
       </section>
@@ -91,9 +93,12 @@ function About() {
             hobbies.<span>forEach</span>
           </h1>
           <p>
-            Apart from learning new programming stuff, I also indulge myself
-            with my favorite hobbies which are: listening to music, playing
-            guitar, getting rekt in Dota 2, and watching some anime and movies.
+            In addition to learning new programming skills, I also enjoy
+            indulging in my favorite hobbies. These include listening to music,
+            playing guitar, getting rekt in Dota 2, and watching anime and
+            movies. These activities allow me to relax and recharge, and they
+            also help me stay creative and inspired in my work as a developer,
+            except getting destroyed in Dota.
           </p>
         </div>
       </section>

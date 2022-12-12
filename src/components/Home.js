@@ -7,7 +7,7 @@ import Card from "./Card";
 function Home() {
 
   useEffect(() => {
-    document.body.className = 'home-body';
+    document.body.className = 'no-scroll-body';
   }, []);
 
   return (
