@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 function Gallery(props) {
   const galleryRef = useRef();
+  const intervalRef = useRef();
 
   useEffect(() => {
     const galleryUpImageSource = [
@@ -42,7 +43,7 @@ function Gallery(props) {
       index++;
       indexReverse--;
 
-      setInterval(() => {
+      intervalRef.current = setInterval(() => {
         for (const image of images) {
           const cardTop = parseFloat(image.style.top);
           const currentBottom = image.getBoundingClientRect().bottom;
@@ -81,6 +82,9 @@ function Gallery(props) {
         }
       }, 1500);
     }
+
+    //Clear interval to avoid memory leak
+    return () => clearInterval(intervalRef.current);
   }, []);
 
   return (

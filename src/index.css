@@ -441,6 +441,10 @@ a {
   transform: translateX(0);
 }
 
+.slide-in{
+  animation: fadein 250ms ease-in-out, slide 250ms ease-in-out;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;

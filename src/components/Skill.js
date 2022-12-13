@@ -45,6 +45,9 @@ function Skill() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  const languageNameRef = useRef(null);
+  const languageDescriptionRef = useRef(null);
+
   function onSelectLanguage(event) {
     const selectedLanguage = languages.find(
       (language) => language.name === event.target.dataset.name
@@ -61,6 +64,7 @@ function Skill() {
         previousActiveGrid.current = event.target;
       } else {
         previousActiveGrid.current = null;
+        setTitle("");
         setActive(false);
       }
     } else {
@@ -85,21 +89,43 @@ function Skill() {
     for (const grid of languagesSectionRef.current.lastElementChild.children) {
       observer.observe(grid);
     }
-    setTimeout(() => {
+    const timeOut = setTimeout(() => {
       for (const grid of languagesSectionRef.current.lastElementChild
         .children) {
-        grid.classList.remove('hidden');
-        grid.classList.remove('show');
+        grid.classList.remove("hidden");
+        grid.classList.remove("show");
       }
     }, 1500);
+
+    //Clear interval to avoid memory leak
+    return () => clearTimeout(timeOut);
   }, []);
+
+  useEffect(() => {
+    let timeOut;
+    if (languageNameRef.current !== null) {
+      languageNameRef.current.classList.add("slide-in");
+      languageDescriptionRef.current.classList.add("slide-in");
+      timeOut = setTimeout(() => {
+        languageNameRef.current.classList.remove("slide-in");
+        languageDescriptionRef.current.classList.remove("slide-in");
+      }, 250);
+    }
+
+    return () => clearTimeout(timeOut);
+  }, [title]);
 
   return (
     <>
       <section className="skill-section" ref={languagesSectionRef}>
         <div className="container hidden">
           {active ? (
-            <SkillDescription title={title} description={description} />
+            <SkillDescription
+              title={title}
+              description={description}
+              titleRef={languageNameRef}
+              descriptionRef={languageDescriptionRef}
+            />
           ) : (
             <SkillTitle
               firstText={"Programming &"}
