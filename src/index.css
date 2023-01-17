@@ -214,7 +214,7 @@ a {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  background-image: url("https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/83022700_2739147196172459_5038038780427108352_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEvnfnc06rVyWwmySDbMw9sd9FlASEEhJt30WUBIQSEm8R17T5I4U_oosN8z8Y5RWw7pwoCJzK9Kq4erYZG0x08&_nc_ohc=TIzf_NBmw7gAX8NtkWH&tn=qzo0U5Cc6c5PlvLA&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfDY27ftdWlGPhAL4a4xnN1KcbUMPRaEbqdDIEjvBKRb6g&oe=63BD28CD");
+  background-image: url("https://scontent.fmnl17-5.fna.fbcdn.net/v/t1.6435-9/83022700_2739147196172459_5038038780427108352_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEvnfnc06rVyWwmySDbMw9sd9FlASEEhJt30WUBIQSEm8R17T5I4U_oosN8z8Y5RWw7pwoCJzK9Kq4erYZG0x08&_nc_ohc=u2NBHJLAj2EAX_Vt2_9&_nc_ht=scontent.fmnl17-5.fna&oh=00_AfBIQ1882cZoWYyvnVAikotI8hy9d9W1JbAhefHZkSMCsA&oe=63EDF04D");
 }
 
 .container p {
@@ -237,7 +237,7 @@ a {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  background-image: url("https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/79512714_2643900565701618_2940730903179034624_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_eui2=AeEr7p6bp6jwfqiUXXP_9lQmqCOOXUJMmoqoI45dQkyairT9ktqTj-P-CPcWAt3bWsF0ujsw3CTSP4VwVcjE1ioQ&_nc_ohc=NWKP9yu0KlcAX_eM4Lt&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfAg1GEU2UAtWKEyr5q6Mevg5VFDVVKz41mD3SsZm65gqw&oe=63BD4302");
+  background-image: url("https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/79512714_2643900565701618_2940730903179034624_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_eui2=AeEr7p6bp6jwfqiUXXP_9lQmqCOOXUJMmoqoI45dQkyairT9ktqTj-P-CPcWAt3bWsF0ujsw3CTSP4VwVcjE1ioQ&_nc_ohc=GUQ-wCROUdYAX-P04o4&tn=f9yvJP--mSocQV9O&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfAgCP8OKQU4GCdg9zl_alsp_FHiebmiJBaK20WP_uGC5g&oe=63EE0A82");
 }
 
 .school-container {
@@ -289,27 +289,11 @@ a {
   background-image: url("https://www.udiscovermusic.com/wp-content/uploads/2020/06/Jimi-Hendrix-GettyImages-85001690-1000x600.jpg");
 }
 
-.school-container,
-.hobby-image {
-  transition-delay: 200ms;
-}
-
-.school-container:nth-child(2),
-.hobby-image:nth-child(2) {
-  transition-delay: 400ms;
-}
-
-.school-container:nth-child(3),
-.hobby-image:nth-child(3) {
-  transition-delay: 600ms;
-}
-
-.school-container:nth-child(4),
-.hobby-image:nth-child(4) {
-  transition-delay: 800ms;
-}
-
 /* SKILLS */
+
+.container.description {
+  width: 45% !important;
+}
 
 .skill-first-text,
 .skill-second-text,
@@ -347,10 +331,11 @@ a {
   justify-content: center;
   position: relative;
   cursor: pointer;
+  padding: 1%;
   box-shadow: 1px 3px 27px -5px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 1px 3px 27px -5px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 1px 3px 27px -5px rgba(0, 0, 0, 0.24);
-  transition: all 250ms ease-in-out;
+  transition: all 250ms;
 }
 
 .skill-grid::before {
@@ -368,7 +353,7 @@ a {
   content: attr(data-name);
   color: var(--primary-color);
   font-family: var(--font);
-  transition: all 250ms ease-in-out;
+  transition: all 250ms;
 }
 
 .skill-grid:hover {
@@ -380,40 +365,16 @@ a {
   opacity: 0.5;
 }
 
-.show.skill-grid:nth-child(1) {
-  transition-delay: 200ms;
-}
-
-.show.skill-grid:nth-child(2) {
-  transition-delay: 400ms;
-}
-
-.show.skill-grid:nth-child(3) {
-  transition-delay: 600ms;
-}
-
-.show.skill-grid:nth-child(4) {
-  transition-delay: 800ms;
-}
-
-.show.skill-grid:nth-child(5) {
-  transition-delay: 1000ms;
-}
-
-.show.skill-grid:nth-child(6) {
-  transition-delay: 1200ms;
-}
-
 .skill-image {
   width: 55%;
   height: 55%;
   pointer-events: none;
 }
 
-.skill-grid:nth-child(3) .skill-image {
+/* .skill-grid:nth-child(3) .skill-image {
   width: 75%;
   height: 75%;
-}
+} */
 
 .language-name {
   color: var(--bg-color) !important;
@@ -430,10 +391,54 @@ a {
   background-color: var(--grid-highlight-color) !important;
 }
 
+.school-container,
+.hobby-image,
+.show.skill-grid:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.school-container:nth-child(2),
+.hobby-image:nth-child(2),
+.show.skill-grid:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.school-container:nth-child(3),
+.hobby-image:nth-child(3),
+.show.skill-grid:nth-child(3) {
+  transition-delay: 600ms;
+}
+
+.school-container:nth-child(4),
+.hobby-image:nth-child(4),
+.show.skill-grid:nth-child(4) {
+  transition-delay: 800ms;
+}
+
+.show.skill-grid:nth-child(5) {
+  transition-delay: 1000ms;
+}
+
+.show.skill-grid:nth-child(6) {
+  transition-delay: 1200ms;
+}
+
+.show.skill-grid:nth-child(7) {
+  transition-delay: 1400ms;
+}
+
+.show.skill-grid:nth-child(8) {
+  transition-delay: 1600ms;
+}
+
+.show.skill-grid:nth-child(9) {
+  transition-delay: 1800ms;
+}
+
 .hidden {
   opacity: 0;
   transform: translateX(-40px);
-  transition: all 0.8s ease-in-out;
+  transition: all 0.8s;
 }
 
 .show {
@@ -441,8 +446,8 @@ a {
   transform: translateX(0);
 }
 
-.slide-in{
-  animation: fadein 250ms ease-in-out, slide 250ms ease-in-out;
+.slide-in {
+  animation: fadein 250ms, slide 250ms;
 }
 
 @keyframes fadein {
