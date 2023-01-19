@@ -35,31 +35,46 @@ export const technologies = [
   {
     name: "React JS",
     description:
-      "As I delve deeper into learning JavaScript there's no doubt that along the road I have to learn React JS as well. In fact this portfolio is developed using React JS to create a single page application.",
+      "As I continue to expand my knowledge of JavaScript, it has become clear that learning React JS is also necessary. In fact, this portfolio utilizes React JS to create a seamless, single page application.",
   },
   {
     name: "CodeIgniter 3",
     description:
-      "CodeIgniter 3 introduced me to web frameworks as well as PHP. It gave me an idea with the importance of code reusability and boilerplates, which provide easier development process. CodeIgniter 3 also offers some security features for CSRF, form validation, and Cross Site Scripting (XSS). Fun fact with CodeIgniter 3, I started learning through documentations as well.",
+      "CodeIgniter 3 was my introduction to both web frameworks and PHP. It emphasized the value of code reusability and the use of boilerplates, simplifying the development process. Additionally, it provides security features such as protection against CSRF, form validation, and XSS. An interesting aspect of my experience with CodeIgniter 3 was that I began learning through reading the documentation.",
   },
   {
     name: "Django",
     description:
-      "In essence Django is just another web framework, like CodeIgniter 3, but requires a different programming language to develop. But for machine learning application Django is a perfect fit, as you can load a machine learning model through it and create web application over it.",
+      "At its core, Django is a web framework similar to CodeIgniter 3, but it utilizes a different programming language. However, it excels in the development of machine learning applications, as it allows for the integration of machine learning models within web applications.",
   },
   {
     name: "FastAPI",
     description:
-      "For stand alone RESTful API my choice is FastAPI, as it is a minimalistic and a lightweight framework. It also offers interactive documentation for API endpoints, which helps the developers understand the necessary parameters, request methods, and schemas required when using my API. FastAPI is also our choice for our thesis project, which is a Nudity  classification and detection API.",
+      "When it comes to building a standalone RESTful API, my choice is FastAPI for its minimalistic and lightweight design. It also provides interactive documentation for API endpoints, making it easy for developers to understand the required parameters, request methods, and schemas when using the API. Additionally, as a researcher, I have chosen to use FastAPI for our thesis project, which involves building a nudity classification and detection API.",
   },
   {
     name: "Bootstrap",
     description:
-      "With Bootstrap I can easily create simple user interface for some of my projects. Bootstrap offers responsive features as well as ready to use forms and components.",
+      "Bootstrap allows me to effortlessly create simple and visually appealing user interfaces for my projects. It offers responsive design features and a wide range of pre-designed forms and components that can be easily integrated into my projects.",
   },
   {
     name: "Express JS",
     description:
-      "To be honest I have never applied Express JS to some of my school projects but I started learning it to further understand authentication using JSON web tokens as well as learn MongoDB.",
+      "To be transparent, I have not yet had the opportunity to use Express JS in any of my school projects. However, I have chosen to learn it in order to gain a deeper understanding of authentication methods using JSON web tokens and to also explore the use of MongoDB.",
+  },
+  {
+    name: "TensorFlow",
+    description:
+      "TensorFlow served as my introduction to the field of Artificial Intelligence. Despite my limited experience in machine learning, I have been able to utilize TensorFlow to create basic classification and object detection models using transfer learning techniques.",
+  },
+  {
+    name: "MySQL",
+    description:
+      "I used MySQL to perform various database operations such as creating tables, inserting data, updating records, and retrieving data through its powerful SQL interface. The user-friendly and intuitive interface made it easy for me to manage and organize my data, and perform CRUD operations efficiently.",
+  },
+  {
+    name: "MongoDB",
+    description:
+      "I used MongoDB to manage my data and perform various database operations such as creating collections, inserting documents, updating records, and retrieving data through its document-oriented structure. MongoDB made it easy for me to perform CRUD operations with ease.",
   },
 ];
