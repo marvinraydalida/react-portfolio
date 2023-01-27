@@ -14,11 +14,13 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-color);
   font-family: var(--font);
+  position: relative;
 }
 
 .no-scroll-body {
@@ -183,11 +185,12 @@ a {
 .about-section:first-of-type,
 .skill-section:first-of-type {
   margin-top: 50px !important;
-  margin-bottom: 50px !important;
+  /* margin-bottom: 50px !important; */
 }
 
 .about-section:last-of-type {
-  height: 85vh !important;
+  height: 85vh;
+  margin-bottom: 50px !important;
 }
 
 .container {
@@ -564,7 +567,7 @@ a {
   overflow: hidden;
 }
 
-.project-thumbnail img{
+.project-thumbnail img {
   width: 100%;
 }
 
@@ -575,16 +578,16 @@ a {
   justify-content: space-between;
 }
 
-.project-grid-icons a{
+.project-grid-icons a {
   height: 100%;
 }
 
-#icons-container{
+#icons-container {
   display: flex;
   justify-content: space-between;
 }
 
-.project-icon{
+.project-icon {
   height: 100%;
   width: 65px;
   display: flex;
@@ -592,12 +595,12 @@ a {
   margin-right: 5px;
 }
 
-.project-icon-image{
+.project-icon-image {
   width: 50%;
   margin: auto;
 }
 
-#source-code-btn{
+#source-code-btn {
   height: 100%;
   width: 170px;
   background-color: #161816;
@@ -609,21 +612,21 @@ a {
   transition: all 250ms ease;
 }
 
-#source-code-btn:hover{
+#source-code-btn:hover {
   background-color: #121312;
   transform: scale(1.01);
 }
 
-#source-code-btn:active{
+#source-code-btn:active {
   background-color: #0f0f0f;
   transform: scale(1.01);
 }
 
-#source-code-btn h1{
+#source-code-btn h1 {
   font-size: 1.2rem;
 }
 
-#source-code-btn svg{
+#source-code-btn svg {
   width: 30px;
   height: 30px;
   color: white;
@@ -726,6 +729,8 @@ a {
     line-height: 8rem;
   }
 
+  /* HOME */
+
   .introduction p {
     max-width: 500px;
     font-size: 1.3rem;
@@ -739,6 +744,7 @@ a {
   .social svg {
     width: 35px;
     height: 35px;
+    margin-right: 20px;
   }
 
   .gallery {
@@ -752,6 +758,240 @@ a {
 
   #down {
     right: -15%;
+  }
+
+  .card {
+    height: 415px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction h1 {
+    font-size: 8rem;
+    line-height: 7rem;
+  }
+
+  /* HOME */
+
+  .introduction p {
+    max-width: 500px;
+    font-size: 1.1rem;
+    margin-top: 1.3rem;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gallery {
+    width: 27vw;
+    height: 130vh;
+  }
+
+  #up {
+    right: 5%;
+  }
+
+  #down {
+    right: -25%;
+  }
+
+  .card {
+    height: 415px;
+    width: 100%;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    height: 55vh !important;
+    margin-bottom: 200px !important;
+  }
+
+  .container h1 {
+    font-size: 4rem;
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
+
+  .container h1:last-of-type {
+    font-size: 3.3rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+  }
+
+  #image-me-container {
+    width: 90%;
+    height: 100%;
+  }
+
+  .container p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  #image-education-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #hobby .container:nth-child(1) {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar li {
+    margin-left: 30px;
+  }
+
+  /* HOME */
+
+  .introduction {
+    height: 60vh;
+  }
+
+  .introduction h1 {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+
+  .introduction p {
+    max-width: 400px;
+    font-size: 1rem;
+    margin-top: 1.1rem;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gallery {
+    width: 35vw;
+    height: 130vh;
+    transform: rotate(11deg);
+  }
+
+  #up {
+    right: -5%;
+  }
+
+  #down {
+    display: none;
+  }
+
+  .card {
+    height: 415px;
+    width: 100%;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    height: 100vh !important;
+    flex-direction: column;
+  }
+
+  .about-section {
+    margin-bottom: 0px !important;
+  }
+
+  .container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container h1 {
+    margin-bottom: 20px !important;
+    text-align: center;
+  }
+
+  #image-me-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #education{
+    flex-direction: column-reverse;
+  }
+
+  #education .container:nth-child(2) {
+    width: 100%;
+  }
+
+  .school-container{
+    width: 100%;
+  }
+
+  .school{
+    width: 100% !important;
+    font-size: 1.5rem !important;
+  }
+
+  .course, .school-year{
+    font-size: 1.3rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar li {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
+  /* HOME */
+
+  .introduction {
+    height: 50vh;
+  }
+
+  .introduction h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    margin-left: -3px;
+  }
+
+  .introduction p {
+    max-width: 250px;
+    font-size: 0.8rem;
+    margin-top: 1.1rem;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gallery {
+    width: 70vw;
+    height: 130vh;
+    transform: rotate(14deg);
+    opacity: 0.2;
+  }
+
+  #up {
+    right: -35%;
   }
 
   .card {

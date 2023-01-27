@@ -8,6 +8,7 @@ function Home() {
 
   useEffect(() => {
     document.body.className = 'no-scroll-body';
+    document.body.parentNode.className = 'no-scroll-body';
   }, []);
 
   return (

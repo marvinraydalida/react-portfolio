@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import ProjectGrid from "./ProjectGrid";
 
 function Project() {
+  useEffect(() => {
+    document.body.className = "scroll-body";
+    document.body.parentNode.className = "scroll-body";
+  }, []);
   return (
     <section className="project-section">
       <h1>

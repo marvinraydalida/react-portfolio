@@ -79,7 +79,7 @@ function Skill() {
 
   useEffect(() => {
     document.body.className = "scroll-body";
-
+    document.body.parentNode.className = 'scroll-body';
     const timeOut = setTimeout;
 
     const observer = new IntersectionObserver((entries) => {
