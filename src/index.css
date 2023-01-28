@@ -764,6 +764,36 @@ a {
     height: 415px;
     width: 100%;
   }
+
+  /* SKILLS */
+  .skill-section {
+    height: 60vh;
+    margin-bottom: 0px;
+  }
+
+  .skill-section:nth-child(3) {
+    margin-bottom: 100px;
+  }
+
+  .skill-grid-container {
+    height: 90%;
+  }
+
+  .skill-first-text,
+  .skill-second-text,
+  .skill-third-text {
+    font-size: 4.5rem !important;
+    line-height: 3rem;
+    margin-top: 5px !important;
+  }
+
+  .soft-skills {
+    margin-bottom: 100px;
+  }
+
+  #soft-skills-grid-container {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -845,6 +875,59 @@ a {
   #hobby .container:nth-child(1) {
     height: 100%;
   }
+
+  /* SKILLS */
+
+  .skill-section {
+    height: 50vh;
+    margin-bottom: 0px;
+  }
+
+  .skill-section:nth-child(3) {
+    margin-bottom: 50px;
+  }
+
+  .language-description {
+    width: 100% !important;
+  }
+
+  .skill-grid-container {
+    height: 90%;
+  }
+
+  .skill-first-text,
+  .skill-second-text,
+  .skill-third-text {
+    font-size: 3rem !important;
+    line-height: 1.5rem;
+    margin-top: 5px !important;
+  }
+
+  .language-name {
+    margin-bottom: 10px !important;
+  }
+
+  .language-description {
+    font-size: 1rem !important;
+    line-height: 1.6rem !important;
+  }
+
+  .soft-skills {
+    margin-bottom: 200px;
+  }
+
+  #soft-skills-grid-container {
+    width: 90%;
+  }
+
+  .soft-skill-grid h1 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .soft-skill-grid p {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -905,17 +988,27 @@ a {
   }
 
   .about-section {
-    margin-bottom: 0px !important;
+    margin-bottom: 10px !important;
   }
 
   .container {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100% !important;
   }
 
   .container h1 {
-    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     text-align: center;
+  }
+
+  .container p {
+    text-align: center;
+  }
+
+  #about .container:nth-child(1),
+  #education .container:nth-child(2),
+  #hobby .container:nth-child(1) {
+    margin: 0px;
   }
 
   #image-me-container {
@@ -923,26 +1016,87 @@ a {
     height: 100%;
   }
 
-  #education{
+  #education {
     flex-direction: column-reverse;
   }
 
-  #education .container:nth-child(2) {
+  .school-container {
     width: 100%;
   }
 
-  .school-container{
-    width: 100%;
-  }
-
-  .school{
+  .school {
     width: 100% !important;
     font-size: 1.5rem !important;
   }
 
-  .course, .school-year{
+  .course,
+  .school-year {
     font-size: 1.3rem !important;
     line-height: 2rem !important;
+  }
+
+  /* SKILLS */
+
+  .skill-section {
+    height: 80vh;
+    flex-direction: column;
+    margin-bottom: 200px !important;
+  }
+
+  .skill-section:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  .container.description {
+    margin: auto;
+    width: 90% !important;
+  }
+
+  .skill-grid-container {
+    width: 80% !important;
+    margin: 100px auto 0px auto;
+  }
+
+  .skill-grid-container:nth-child(2) {
+    width: 70% !important;
+    margin-top: 0px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skill-grid {
+    height: 100%;
+  }
+
+  .skill-first-text,
+  .skill-second-text,
+  .skill-third-text {
+    font-size: 3.5rem !important;
+    line-height: 3.5rem;
+  }
+
+  .soft-skills p{
+    font-size: 1.2rem;
+  }
+
+  #soft-skills-grid-container {
+    width: 90%;
+  }
+
+  .soft-skill-grid h1 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .soft-skill-grid p {
+    font-size: 0.9rem;
+  }
+  
+  .soft-skill-grid svg {
+    width: 50px;
+    height: 20px;
+    margin-left: -13px;
+    margin-bottom: 10px;
   }
 }
 
@@ -997,5 +1151,56 @@ a {
   .card {
     height: 415px;
     width: 100%;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    height: 100vh !important;
+    flex-direction: column;
+  }
+
+  .about-section {
+    margin-bottom: 0px !important;
+  }
+
+  .about-section:first-of-type {
+    margin-top: 0px !important;
+  }
+
+  .container {
+    width: 100% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .container h1 {
+    margin-bottom: 10px !important;
+    font-size: 2rem !important;
+  }
+
+  .container p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #image-me-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .school-container {
+    width: 100%;
+  }
+
+  .school {
+    width: 100% !important;
+    font-size: 1.2rem !important;
+  }
+
+  .course,
+  .school-year {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
   }
 }
