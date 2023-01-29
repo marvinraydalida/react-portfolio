@@ -1068,6 +1068,10 @@ a {
     height: 100%;
   }
 
+  .skill-grid:hover::before {
+    opacity: 0;
+  }
+
   .skill-first-text,
   .skill-second-text,
   .skill-third-text {
@@ -1075,7 +1079,11 @@ a {
     line-height: 3.5rem;
   }
 
-  .soft-skills p{
+  #soft-skills-title h1 {
+    margin-right: 10px;
+  }
+
+  .soft-skills p {
     font-size: 1.2rem;
   }
 
@@ -1091,7 +1099,7 @@ a {
   .soft-skill-grid p {
     font-size: 0.9rem;
   }
-  
+
   .soft-skill-grid svg {
     width: 50px;
     height: 20px;
@@ -1174,7 +1182,7 @@ a {
     margin-bottom: 20px;
   }
 
-  .container h1 {
+  .about-section .container h1 {
     margin-bottom: 10px !important;
     font-size: 2rem !important;
   }
@@ -1203,4 +1211,55 @@ a {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
   }
+
+  /* SKILLS */
+
+  .skill-section {
+    height: 70vh !important;
+    margin-bottom: 100px !important;
+  }
+
+  .skill-first-text,
+  .skill-second-text,
+  .skill-third-text {
+    font-size: 3rem !important;
+    line-height: 3rem;
+  }
+
+  .language-name {
+    font-size: 2.5rem !important;
+  }
+
+  .language-description{
+    width: 100% !important;
+    line-height: 1.3rem !important;
+  }
+
+  .skill-grid-container:nth-child(2){
+    width: 100% !important;
+    height: 70%;
+  }
+
+  .soft-skills {
+    height: auto !important;
+    margin-bottom: 100px !important;
+  }
+
+  .soft-skills p {
+    font-size: 1rem !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #soft-skills-grid-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .soft-skill-grid h1 {
+    font-size: 1.3rem;
+    color: white;
+  }
+
 }
