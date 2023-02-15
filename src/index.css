@@ -78,6 +78,36 @@ a {
   color: var(--secondary-color);
 }
 
+footer {
+  width: 85vw;
+  height: 150px;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+footer h1{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: var(--primary-gray);
+  margin-bottom: 3px;
+  /* text-align: center; */
+  text-align: end;
+}
+
+footer h1 span{
+  color: var(--secondary-color);
+}
+
+#footer-contact{
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+#footer-contact span{
+  
+}
+
 /* HOME */
 
 .home {
@@ -515,7 +545,7 @@ a {
 .project-section {
   max-width: 1920px;
   width: 85vw;
-  margin: 20px auto 200px auto;
+  margin: 20px auto 50px auto;
 }
 
 .project-section h1 {
@@ -538,44 +568,57 @@ a {
 .project-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  row-gap: 100px;
-  column-gap: 75px;
+  row-gap: 60px;
 }
 
 .project-grid {
-  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50vh;
   /* border: 1px solid white; */
-}
-
-.project-grid > * {
-  margin-bottom: 15px;
 }
 
 .project-grid h1 {
   font-size: 2.5rem;
 }
 
+.redirect > a:hover {
+  color: var(--secondary-color);
+}
+
 .project-grid p {
+  margin-top: 15px;
   font-size: 1.2rem;
 }
 
 .project-thumbnail {
-  width: 100%;
-  height: 65%;
+  width: 53%;
+  height: 100%;
   border-radius: 15px;
   overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-thumbnail img {
   width: 100%;
 }
 
+.project-details {
+  width: 45%;
+  position: relative;
+}
+
 .project-grid-icons {
   width: 100%;
-  height: 10%;
+  height: 12%;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
 }
 
 .project-grid-icons a {
@@ -794,6 +837,25 @@ a {
   #soft-skills-grid-container {
     width: 80%;
   }
+
+  /* PROJECTS */
+
+  .project-grid h1{
+    font-size: 2.3rem;
+  }
+
+  .project-grid p{
+    font-size: 1rem;
+  }
+
+  .project-grid-icons {
+    height: 15%;
+  }
+
+  .project-icon {
+    width: 50px;
+  }
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -927,6 +989,52 @@ a {
 
   .soft-skill-grid p {
     font-size: 0.9rem;
+  }
+
+  /* PROJECTS */
+
+  .project-section h1, .project-section p{
+    text-align: center;
+  }
+  
+  .project-section p {
+    font-size: 1.5rem;
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  .project-grid h1{
+    text-align: start !important;
+  }
+
+  .project-grid p{
+    text-align: start !important;
+    font-size: 1rem !important;
+    margin-top: 5px;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    height: 63%;
+  }
+  
+  .project-details {
+    width: 100%;
+    height: 35%;
+    position: relative;
+  }
+
+  .project-grid-icons {
+    height: 20%;
+  }
+
+  .project-icon {
+    width: 60px;
   }
 }
 
@@ -1106,6 +1214,16 @@ a {
     margin-left: -13px;
     margin-bottom: 10px;
   }
+
+  /* PROJECTS */
+
+  .project-grid h1{
+    font-size: 1.7rem;
+  }
+
+  .project-grid p{
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1260,6 +1378,82 @@ a {
   .soft-skill-grid h1 {
     font-size: 1.3rem;
     color: white;
+  }
+
+  /* PROJECTS */
+  
+  .project-section h1 {
+    font-size: 3rem;
+  } 
+
+  .project-section p {
+    font-size: 1.2rem;
+  } 
+
+  .project-container {
+    row-gap: 80px;
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .project-grid h1{
+    font-size: 1.6rem !important;
+    text-align: center !important;
+  }
+
+  .project-grid p{
+    text-align: center !important;
+    font-size: .9rem !important;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .project-thumbnail {
+    height: 40%;
+  }
+  
+  .project-details {
+    height: 75%;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .project-grid-icons {
+    height: 25%;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+  }
+
+  #icons-container {
+    height: 60px;
+  }
+
+  .project-icon {
+    width: 40px;
+  }
+
+  #source-code-btn {
+    height: 80%;
+    margin-top: 10px;
+  }
+
+  #source-code-btn h1 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* PROJECTS */
+
+  .project-details {
+    height: 100%;
+    position: relative;
+    margin-top: 10px;
   }
 
 }

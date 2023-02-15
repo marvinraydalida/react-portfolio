@@ -35,6 +35,14 @@ const icons = {
     src: "/images/sklearn.png",
     bgColor: "#CACACA",
   },
+  tensorflow: {
+    src: "/images/tensorflow.svg",
+    bgColor: "#693932",
+  },
+  fastapi: {
+    src: "/images/fastapi.svg",
+    bgColor: "#164C63",
+  },
 };
 
 function ProjectIcon(props) {

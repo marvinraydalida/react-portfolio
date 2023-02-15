@@ -7,7 +7,7 @@ function About() {
 
   useEffect(() => {
     document.body.className = "scroll-body";
-    document.body.parentNode.className = 'scroll-body';
+    document.body.parentNode.className = "scroll-body";
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -103,6 +103,13 @@ function About() {
           </p>
         </div>
       </section>
+      <footer>
+        <h1 id="footer-contact">
+        <span>contact</span>.me
+        </h1>
+        <h1>marvinraydalida@gmail.com</h1>
+        <h1>+63 997 218 4815</h1>
+      </footer>
     </>
   );
 }
