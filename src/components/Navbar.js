@@ -23,7 +23,12 @@ function Navbar() {
             skills
           </NavLink>
         </li>
-        <li>projects</li>
+        <li><NavLink
+            style={(data) => (data.isActive ? { color: "#d342ab" } : {})}
+            to="/project"
+          >
+            projects
+          </NavLink></li>
       </ul>
     </nav>
   );

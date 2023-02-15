@@ -13,9 +13,9 @@ function SkillDescriptionContainer(props) {
         />
       ) : (
         <SkillTitle
-          firstText={"Programming &"}
-          secondText={"Markup"}
-          thirdText={"Languages"}
+          firstText={props.placeHolderTitle[0]}
+          secondText={props.placeHolderTitle[1]}
+          thirdText={props.placeHolderTitle[2]}
         />
       )}
     </div>
